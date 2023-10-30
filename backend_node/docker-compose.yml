@@ -1,0 +1,31 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: bot_tcc
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: botdb
+      PGDATA: /var/lib/postgresql/data/botdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+  app-bot-tcc:
+    build:
+      context: .  # Ponto para o diretório atual onde o Dockerfile está localizado
+      dockerfile: .dockerfile  # Nome do seu Dockerfile
+    container_name: backend  # Nome do contêiner
+    ports:
+      - "3000:3000"  # Mapeamento da porta do contêiner para a porta do host
+    volumes:
+      - ./src:/app/src  # Mapeamento de volumes (opcional) para sincronizar o código-fonte
+    # environment:
+    #   - NODE_ENV=development  # Variáveis de ambiente (opcional)
+    depends_on:
+      - postgres
+volumes:
+  pg-data:
+
+ 
