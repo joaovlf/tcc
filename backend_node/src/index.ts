@@ -10,4 +10,4 @@ app.use(express.json());
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 
-app.listen(3000, () => console.log("servidor rodando "));
+app.listen(8000, () => console.log("servidor rodando "));

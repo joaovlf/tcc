@@ -1,17 +1,38 @@
 import { useState } from "react";
-import { UserService } from "../services/userService";
+import { userService } from "../services";
+import { useRouter } from "next/navigation";
+
+
+interface IUser {
+	name:string;
+	userName:string;
+	email:string;
+	password:string;
+	confirmPassword?:string;
+}
 
 export const useUserInfo = () =>{
-	const [user, setUser] = useState({});
+	const [user, setUser] = useState<IUser>({} as IUser);
+	const router = useRouter();
 
-
-	const submit = async () =>{
-		await UserService.create({name:"joaasdsado123", userName:"asdasdsa1asdas2312321", email:"adsadsad@sadsadsa.com", password:"123sadshaid"});
+	const onChangeUserFormData = (k:string, v:string) => {
+		console.log(k,v);
+		setUser((prevState)=>({...prevState, [k]:v}));
 	};
 
+
+	const submit = async () => {
+
+		if (user.confirmPassword) delete user.confirmPassword;
+		console.log("BODY YSER", user);
+		await userService.createUserService({...user}).then(()=>{
+			router.push("/auth/login");
+		}).catch(e=>console.log(e));
+	};
+	
 	return {
 		user,
-		setUser,
-		submit
+		submit,
+		onChangeUserFormData
 	};
 };
