@@ -1,0 +1,1 @@
+export type GenericFilter = {field:string, value:string} 

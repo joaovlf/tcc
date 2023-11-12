@@ -1,7 +1,6 @@
 import { Button } from "../../components/Button";
 import { Container } from "../../components/Container";
 import { List } from "../../components/List";
-// import { List } from "../../components/List";
 
 export default function Page  () {
 	return (
@@ -15,18 +14,11 @@ export default function Page  () {
 						<List items={[{name:"projeto 1", uuid:"1"}, {name:"projeto 2", uuid:"2"}]}/>
 					</Container>
 				</div>
-        
 			</Container>
 			<div className="flex gap-xs">
-				<Button style={{padding:"6px 15px"}}>
-              1
-				</Button>
-				<Button style={{padding:"6px 15px"}}>
-              2
-				</Button>
-				<Button style={{padding:"6px 15px"}}>
-              3
-				</Button>
+				<Button style={{padding:"6px 15px"}}>1</Button>
+				<Button style={{padding:"6px 15px"}}>2</Button>
+				<Button style={{padding:"6px 15px"}}>3</Button>
 			</div>
 		</div>
 	);

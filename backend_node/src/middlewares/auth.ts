@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
-import { userRepository } from "../repositories/UserRepository";
+import { userRepository } from "../repositories";
 
 export const authMiddleware = async (req:Request,res:Response,next:NextFunction) => {
     const {authorization} = req.headers;

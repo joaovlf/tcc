@@ -7,7 +7,7 @@ interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement>{
 
 export const Button: FC<ButtonProps> = ({children, ...rest}) => {
 	return (
-		<button {...rest} className="bg-gradient-to-b from-secondary to-secondary_800 p-xs rounded-xs  shadow-md ">
+		<button {...rest} className="bg-gradient-to-br from-secondary to-90% w-full  p-xs rounded-xs  shadow-md ">
 			{children}
 		</button>
 	);

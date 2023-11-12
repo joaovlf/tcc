@@ -22,7 +22,7 @@ export const Container:React.FC<ContainerProps> = ({title, children, variant="li
 		>
 			{title && (
 				<div className="w-full text-center">
-					<h1 className="text-xl font-medium text-neutral_light" style={{fontSize:style?.fontSize}}>{title}</h1>
+					<h1 className="text-lg font-medium text-neutral_light" style={{fontSize:style?.fontSize}}>{title}</h1>
 				</div>
 			)}
 			<div className="flex  gap-xl flex-col">

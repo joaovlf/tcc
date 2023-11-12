@@ -16,7 +16,6 @@ export const useUserInfo = () =>{
 	const router = useRouter();
 
 	const onChangeUserFormData = (k:string, v:string) => {
-		console.log(k,v);
 		setUser((prevState)=>({...prevState, [k]:v}));
 	};
 
@@ -24,7 +23,6 @@ export const useUserInfo = () =>{
 	const submit = async () => {
 
 		if (user.confirmPassword) delete user.confirmPassword;
-		console.log("BODY YSER", user);
 		await userService.createUserService({...user}).then(()=>{
 			router.push("/auth/login");
 		}).catch(e=>console.log(e));

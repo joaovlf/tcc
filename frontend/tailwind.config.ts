@@ -23,7 +23,8 @@ const config: Config = {
 			full:"100%"
 		},
 		height:{
-			lg:"64px"
+			lg:"64px",
+			giant:"230px"
 		},
 		borderRadius: {
 			xs:"4px",
@@ -48,7 +49,8 @@ const config: Config = {
 		colors: {
 			neutral_light: "#D2D2D2",
 			neutral_dark: "#2A2A28",
-			primary_300:"#9022D4",
+			primary_200:"#9022D4",
+			primary_300:"#8018C1",
 			primary: "#62029E",
 			primary_500:"#4F0380",
 			primary_800:"#2E0348",
@@ -71,7 +73,9 @@ const config: Config = {
 			"extra-bold": "800",
 			black: "900",
 		},
+		
 		extend: {
+		
 			fontFamily: {
 				sans: ["var(--font-inter)"],
 			},

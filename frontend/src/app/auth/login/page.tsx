@@ -13,7 +13,7 @@ export default function Page  () {
 					<Input label="Email:"/>
 					<Input label="Senha:"/>
 					<div className="flex flex-grow justify-center w-full flex-1">
-						<Button style={{maxWidth:200, width:"100%"}}>Entrar</Button>
+						<Button>Entrar</Button>
 					</div>
 				</Container>
 			</div>

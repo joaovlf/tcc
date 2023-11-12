@@ -20,7 +20,7 @@ export default function Page  () {
 					<Input id="password" defaultValue={user?.password} onChange={({target:{id, value}}:ChangeEvent<HTMLInputElement>)=>onChangeUserFormData(id,value)} label="Senha:"/>
 					<Input id="confirmPassword" defaultValue={user?.confirmPassword} onChange={({target:{id, value}}:ChangeEvent<HTMLInputElement>)=>onChangeUserFormData(id,value)} label="Confirmar Senha:"/>
 					<div className="flex flex-grow justify-center w-full flex-1">
-						<Button onClick={()=>submit()} style={{maxWidth:200, width:"100%"}}>Entrar</Button>
+						<Button onClick={()=>submit()}>Entrar</Button>
 					</div>
 				</Container>
 			</div>
