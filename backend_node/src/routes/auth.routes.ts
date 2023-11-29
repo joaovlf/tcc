@@ -5,5 +5,5 @@ const router = Router();
 
 router.post("/login", authController.authenticate);
 
-export { router as authRoute };
+export { router as authRoutes };
 

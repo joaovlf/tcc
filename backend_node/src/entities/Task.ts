@@ -4,6 +4,6 @@ export class Task {
     constructor(private data :ITask.Entity){}
 
     public getData(){
-        return {...this.data};
+        return this.data;
     }
 }

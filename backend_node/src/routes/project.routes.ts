@@ -7,4 +7,4 @@ router.get("/list", projectController.list);
 router.post("/create", projectController.create);
 router.delete("/delete/:uuid", projectController.delete);
 
-export {router as projectRoute};
+export {router as projectRoutes};
